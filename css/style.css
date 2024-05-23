@@ -1,5 +1,6 @@
-/* Reset some default margin/padding */
+
 body, header, nav {
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -21,6 +22,13 @@ body, header, nav {
     align-items: center;
     text-decoration: none;
     color: inherit; 
+    color: #3E3F43;
+    font-family: Nunito;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 6px;
 }
 
 #logoimg {
@@ -37,24 +45,32 @@ body, header, nav {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    transition: color 0.3s ease; /* Transition pour l'effet hover */
+    
 }
 
-.navbar .nav-link:nth-child(2) { 
-    font-weight: 700;
+.navbar .nav-link.active {
+    font-weight: 700; 
 }
+
+.navbar .nav-link:hover {
+    color: #8B5CF6; /* Couleur du texte au survol */
+}
+
 
 .bg1 {
-    background-image: url('/images/mainimage.png');
+    background-image: url('../images/mainimg.png'); /* Remplacez par le chemin de votre image */
     background-size: cover;
     background-position: center; 
-    width: 100%; 
-    height: 797px;
+    height: 797px; /* Hauteur fixe */
+    width: 100%; /* Assurez-vous que l'élément couvre toute la largeur de l'écran */
     display: flex; 
 }
 
 .hero-content {
     margin-left: 32px; 
     font-family: Nunito;
+    position: absolute;
 
 }
 
@@ -65,10 +81,12 @@ body, header, nav {
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    width: 448px;
 }
 
 .hero-content p {
-    color: rgb(255, 255, 255);
+    color: #000;
+    font-family: Nunito;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -76,27 +94,287 @@ body, header, nav {
     width: 448px;
 }
 
-h3 { 
+
+#about { 
+    margin-top: 32px;
+    width: 1200px;
+}
+
+h3{ 
+   
+    margin-left: 32px;
+    color: #612999;
+font-family: Rubik;
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+line-height: 40px; /* 100% */
+}
+
+#about p { 
+    color: #000;
+    font-family: Rubik;
+    margin-left: 32px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 32px;
+    margin-left: 32px;
+    margin-bottom: 27px;
+}
+
+.content{
+    flex: 1;
+}
+
+.rectangle {
+    width: 376px;
+    height: 496px;
+    background: #EFECFF;
+    border-radius: 38px;
+    box-shadow: 0px 6px 40px 0px (57, 132, 187, 0.05);
+    position: relative;
+    margin-right: 32px;
+}
+
+.rectangle img {
+    width: 376px; 
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 38px; 
+}
+
+.rectangle h2 {
+    width: 221px;
+    color: #000;
+    font-family: Abel;
+    font-size: 30px;
+    color: #000;
+    margin-left: 32px;
+}
+
+
+.rectangle p {
+    width: 315px;
+    /* flex-shrink: 0; */
+    color: #333;
+    font-family: Abel;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 32px; 
+}
+
+h2 {
+    color: #000;
+    text-align: justify;
+    font-family: 'Abel', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 32px;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background: #EFECFF; 
+    padding: 32px;
+    display:flex ;
+    flex-direction: column;
+    
+}
+
+.footer-text {
+    width: 198px;
+    height: 18px;
+    margin-top: 218px;
+    margin-left: 32px;
+    color: #333;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-text p{
+    width: 198px;
+    height: 18px;
+    color: #333;
+    font-family: Nunito;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 155.556% */
+    text-transform: uppercase;
+   
+}
+    
+.icon-container {
+    display: flex;
+    fill: #272D4E;
+    gap:24.38px;
+ }
+
+#copyright {
+    margin-top:16px;
+    color: #333;
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 51px;
+}
+
+.containerfooter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footerdiv {
+    margin-right: 150px;
+    margin-bottom: 8px;
+}
+
+.footerdiv p {
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333;
+    font-family: Nunito;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footerdiv ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footerdiv li {
+    margin-bottom: 8px;
+}
+
+.footer li a { 
+    color: #333;
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.container{ 
+    display: flex;
+}
+
+
+.image {
+    height: 300px;
+    margin: 32px;
+    border: 2px solid #E6DBFE;
+}
+
+#image1 { 
+    width: 300px;
+}
+
+#image2 { 
+    width: 389px;
+}
+
+#list-items p { 
     color: #612999;
     font-family: Rubik;
     font-size: 40px;
     font-style: normal;
     font-weight: 500;
-    line-height: 40px; 
-    margin: 32px;
+    line-height: 40px; /* 100% */
+    margin-left: 32px; 
+} 
+
+.icon-list {
+    margin-left: 32px;
+    list-style: none;
+    padding: 0;
 }
 
-#about p { 
-    width: 1136px;
-    height: 85px;
-flex-shrink: 0;
-    margin-right: 32px;
-    margin-left: 32px;
+.icon-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+}
+
+.icon-circle {
+    width: 82px;
+    height: 82px;
+    background-color: #612999;
+    border-radius: 46.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle svg {
+    fill: white;
+}
+
+.icon-text {
     color: #000;
-    text-align: justify;
     font-family: Rubik;
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 140.625%; 
+    line-height: 14px; /* 58.333% */
+    margin-left: 16px;
+}
+
+
+#yourchoice { 
+    width: 1136px;
+    height: 503px;
+    flex-shrink: 0;
+    background: #EFECFF;
+    margin-bottom: 198px;
+    margin-left:32px;
+}
+
+#yourchoice p { 
+    color: #612999;
+    font-family: Rubik;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px; /* 100% */
+}
+
+
+
+#yourchoice img {
+    width: 100%;
+     /* Pour conserver le ratio de l'image */
+    /* display: block; Pour éviter tout espace supplémentaire sous l'image */
+}
+
+
+
+#publication p { 
+    margin-left: 32px;
+    color: #612999;
+font-family: Rubik;
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+line-height: 40px; /* 100% */
 }
