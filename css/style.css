@@ -9,8 +9,8 @@ body, header, nav {
 .navbar {
     display: flex;
     align-items: center;
-    width: 1200px; /* Full width of the page */
-    height: 128px; /* Fixed height for the navbar */
+    width: 1200px; 
+    height: 128px; 
 }
 
 .logo-container{
@@ -151,11 +151,13 @@ line-height: 40px; /* 100% */
 }
 
 .rectangle h2 {
-    width: 221px;
     color: #000;
+    text-align: justify;
     font-family: Abel;
     font-size: 30px;
-    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     margin-left: 32px;
 }
 
@@ -170,15 +172,15 @@ line-height: 40px; /* 100% */
     margin-left: 32px; 
 }
 
-h2 {
-    color: #000;
+#price {
+    color: #612999;
     text-align: justify;
-    font-family: 'Abel', sans-serif;
-    font-size: 30px;
+    font-family: Abel;
+    font-size: 35px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-right: 32px;
+    margin-left: 32px;
 }
 
 
@@ -186,7 +188,7 @@ h2 {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: auto;
+    height: 287px;
     background: #EFECFF; 
     padding: 32px;
     display:flex ;
@@ -363,8 +365,6 @@ h2 {
 
 #yourchoice img {
     width: 100%;
-     /* Pour conserver le ratio de l'image */
-    /* display: block; Pour éviter tout espace supplémentaire sous l'image */
 }
 
 
@@ -372,9 +372,73 @@ h2 {
 #publication p { 
     margin-left: 32px;
     color: #612999;
-font-family: Rubik;
-font-size: 40px;
-font-style: normal;
-font-weight: 500;
-line-height: 40px; /* 100% */
+   font-family: Rubik;
+   font-size: 40px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 40px; /* 100% */
 }
+
+.icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 10px;
+}
+
+.icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.icon:nth-child(1) { /* Coeur */
+    width: 47px;
+    height: 47px;
+    margin-bottom: 338px; 
+    margin-right: 52px;
+    margin-top: 42px;
+}
+
+.icon:nth-child(1) svg:nth-child(1) {
+    width: 47px;
+    height: 47px;
+}
+
+.icon:nth-child(1) svg:nth-child(2) {
+    width: 23px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon:nth-child(2) { /* Panier */
+    width: 63px;
+    height: 63px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 406px;
+    margin-right: 843px;
+    position: absolute;
+    
+}
+
+.icon:nth-child(2) svg:nth-child(1) {
+    width: 63px;
+    height: 63px;
+    
+}
+
+.icon:nth-child(2) svg:nth-child(2) {
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
